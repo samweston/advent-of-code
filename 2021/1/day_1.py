@@ -3,7 +3,7 @@
 def part_1():
     prev = float('inf')
     count = 0
-    with open('1/input', 'r') as f:
+    with open('2021/1/input', 'r') as f:
         for line in f.readlines():
             num = int(line)
             if num > prev:
@@ -15,7 +15,7 @@ def part_1():
 def part_2():
     count = 0
 
-    with open('1/input', 'r') as f:
+    with open('2021/1/input', 'r') as f:
         lines = [ int(n) for n in f.readlines() ]
 
     prev = lines[0] + lines[1] + lines[2]
@@ -28,6 +28,7 @@ def part_2():
     print(f"part_2={count}")
 
 if __name__ == "__main__":
+    print("2021 day 1")
     part_1()
     part_2()
 

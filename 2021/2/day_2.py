@@ -3,7 +3,7 @@ def part_1():
     horizontal_position = 0
     depth_position = 0
 
-    with open('2/input', 'r') as f:
+    with open('2021/2/input', 'r') as f:
         for line in f.readlines():
             splits = line.split()
             value = int(splits[1])
@@ -21,7 +21,7 @@ def part_2():
     depth_position = 0
     aim = 0
 
-    with open('2/input', 'r') as f:
+    with open('2021/2/input', 'r') as f:
         for line in f.readlines():
             splits = line.split()
             value = int(splits[1])
@@ -36,6 +36,6 @@ def part_2():
     print(f"part_2={horizontal_position * depth_position}")
 
 if __name__ == "__main__":
-    print('day 2')
+    print('2021 day 2')
     part_1()
     part_2()
