@@ -66,6 +66,6 @@ def part_2():
     return sum
 
 if __name__ == '__main__':
-    print('2021 day 7')
+    print('2021 day 8')
     print(f'part_1={part_1()}')
     print(f'part_2={part_2()}')
