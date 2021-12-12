@@ -57,5 +57,5 @@ def solve():
     print(f'part_2={part_2_count}')
     
 if __name__ == '__main__':
-    print('2021 day 11')
+    print('2021 day 12')
     solve()
