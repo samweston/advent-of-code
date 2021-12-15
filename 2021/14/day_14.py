@@ -22,7 +22,7 @@ def step(items, instructions):
 
     return output
 
-def part_1():
+def read_input_and_instructions():
     instructions = dict()
     with open('2021/14/input', 'r') as f:
         input = list(f.readline().strip())
@@ -30,6 +30,11 @@ def part_1():
         for line in f.readlines():
             splits = line.strip().split(' -> ')
             instructions[splits[0]] = splits[1]
+    
+    return input, instructions
+
+def part_1():
+    input, instructions = read_input_and_instructions()
 
     for i in range(0, 10):
         input = step(input, instructions)
@@ -40,7 +45,6 @@ def part_1():
     return input.count(max_item) - input.count(min_item)
 
 def step_with_pairs(pair_counts, instructions):
-
     new_pair_counts = defaultdict(lambda: 0)
 
     for pair, count in pair_counts.items():
@@ -53,13 +57,7 @@ def step_with_pairs(pair_counts, instructions):
     return new_pair_counts
 
 def part_2():
-    instructions = dict()
-    with open('2021/14/input', 'r') as f:
-        input = list(f.readline().strip())
-        f.readline()
-        for line in f.readlines():
-            splits = line.strip().split(' -> ')
-            instructions[splits[0]] = splits[1]
+    input, instructions = read_input_and_instructions()
     
     # Build the pair counts.
     pair_counts = defaultdict(lambda: 0)
